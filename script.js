@@ -7,6 +7,15 @@ const breathingText = document.querySelector('.breathing-text');
 const breathInSound = new Audio('breathe-in-87397.mp3');
 const breathOutSound = new Audio('breath-out-242642.mp3');
 
+// Add this after creating the audio elements
+breathOutSound.addEventListener('error', (e) => {
+    console.error('Error loading breath-out sound:', e);
+});
+
+breathInSound.addEventListener('error', (e) => {
+    console.error('Error loading breath-in sound:', e);
+});
+
 let isRunning = false;
 let isPaused = false;
 let timeLeft = 300; // 5 minutes in seconds
