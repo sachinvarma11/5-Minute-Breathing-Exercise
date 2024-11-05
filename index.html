@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Minute Meditation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-family: Arial, sans-serif;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer:hover {
+            color: #333;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>5 Minute Meditation</h1>
+        <div class="timer">5:00</div>
+        <div class="breathing-text">Click Start to begin</div>
+        <div class="button-container">
+            <button id="startButton">Start Meditation</button>
+            <button id="stopButton" disabled>Stop Meditation</button>
+        </div>
+    </div>
+    <footer class="footer">
+        Built by Sachin Varma
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
